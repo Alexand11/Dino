@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bd88i0rmag045"]
+
+[ext_resource type="PackedScene" uid="uid://dcoo4nevm2gh" path="res://Scenes/plaer.tscn" id="1_vcsut"]
+
+[node name="batalla" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="plaer" parent="." instance=ExtResource("1_vcsut")]

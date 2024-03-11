@@ -18,7 +18,17 @@ config/features=PackedStringArray("4.2", "GL Compatibility")
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=3
 window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
+[file_customization]
+
+folder_colors={
+"res://Scenes/": "gray",
+"res://scripts/": "purple",
+"res://sprites/": "yellow"
+}
 
 [input_devices]
 
