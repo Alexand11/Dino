@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb80jj1xfrmdu"
-path="res://.godot/imported/PntosAccion1.png-befc69e4c2ab22b9706db16ad33cc837.ctex"
+uid="uid://cj24302v8oimu"
+path="res://.godot/imported/heart.png-69bff64251259751f4bcc5909839a008.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/PntosAccion1.png"
-dest_files=["res://.godot/imported/PntosAccion1.png-befc69e4c2ab22b9706db16ad33cc837.ctex"]
+source_file="res://sprites/heart.png"
+dest_files=["res://.godot/imported/heart.png-69bff64251259751f4bcc5909839a008.ctex"]
 
 [params]
 

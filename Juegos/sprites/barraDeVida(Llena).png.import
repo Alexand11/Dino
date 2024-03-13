@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb80jj1xfrmdu"
-path="res://.godot/imported/PntosAccion1.png-befc69e4c2ab22b9706db16ad33cc837.ctex"
+uid="uid://bhoeancjkcks5"
+path="res://.godot/imported/barraDeVida(Llena).png-28c0b290623f253e41d338730c07b145.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/PntosAccion1.png"
-dest_files=["res://.godot/imported/PntosAccion1.png-befc69e4c2ab22b9706db16ad33cc837.ctex"]
+source_file="res://sprites/barraDeVida(Llena).png"
+dest_files=["res://.godot/imported/barraDeVida(Llena).png-28c0b290623f253e41d338730c07b145.ctex"]
 
 [params]
 

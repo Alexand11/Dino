@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dv0xnum3ps2qi"]
+[gd_scene load_steps=3 format=3 uid="uid://dv0xnum3ps2qi"]
 
+[ext_resource type="Script" path="res://scripts/menu_principal.gd" id="1_0nx66"]
 [ext_resource type="Texture2D" uid="uid://dhga4nermayro" path="res://sprites/base.png" id="1_8bd24"]
 
 [node name="MenuPrincipal" type="Control"]
@@ -9,11 +10,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_0nx66")
 metadata/_edit_lock_ = true
 
 [node name="Base" type="Sprite2D" parent="."]
-position = Vector2(92, 94)
-scale = Vector2(0.295, 0.67)
+position = Vector2(142.5, 134)
+scale = Vector2(0.4225, 0.75)
 texture = ExtResource("1_8bd24")
 
 [node name="Label" type="Label" parent="Base"]
@@ -35,10 +37,10 @@ position = Vector2(416, 715)
 scale = Vector2(1.795, 0.76)
 texture = ExtResource("1_8bd24")
 
-[node name="Base4" type="Sprite2D" parent="."]
-position = Vector2(417.75, 945)
+[node name="Base4" type="TouchScreenButton" parent="."]
+position = Vector2(55, 828)
 scale = Vector2(1.81625, 1)
-texture = ExtResource("1_8bd24")
+texture_normal = ExtResource("1_8bd24")
 
 [node name="Base5" type="Sprite2D" parent="."]
 position = Vector2(1246.5, 818.5)
@@ -46,21 +48,39 @@ scale = Vector2(1.9675, 2.185)
 texture = ExtResource("1_8bd24")
 
 [node name="Base6" type="Sprite2D" parent="."]
-position = Vector2(1365, 497.5)
-scale = Vector2(2.57375, 0.715)
+position = Vector2(1365, 385)
+scale = Vector2(2.57375, 1.84)
+texture = ExtResource("1_8bd24")
+
+[node name="Base8" type="TouchScreenButton" parent="."]
+position = Vector2(1680, 828)
+scale = Vector2(0.49875, 1)
+texture_normal = ExtResource("1_8bd24")
+
+[node name="Base9" type="Sprite2D" parent="."]
+position = Vector2(1777, 698)
+scale = Vector2(0.49875, 1)
+texture = ExtResource("1_8bd24")
+
+[node name="Base11" type="Sprite2D" parent="."]
+position = Vector2(1799, 102)
+scale = Vector2(0.362188, 0.68)
 texture = ExtResource("1_8bd24")
 
 [node name="Base7" type="Sprite2D" parent="."]
-position = Vector2(1361, 227.5)
-scale = Vector2(2.58, 1.825)
+position = Vector2(908, 107)
+scale = Vector2(0.285, 0.6)
 texture = ExtResource("1_8bd24")
 
-[node name="Base8" type="Sprite2D" parent="."]
-position = Vector2(1785.75, 942)
-scale = Vector2(0.49875, 1)
-texture = ExtResource("1_8bd24")
+[node name="Label2" type="Label" parent="Base7"]
+offset_left = 312.281
+offset_top = -95.0
+offset_right = 384.281
+offset_bottom = -72.0
+scale = Vector2(8, 8)
+text = "12345890
+"
+metadata/_edit_use_anchors_ = true
 
-[node name="Base9" type="Sprite2D" parent="."]
-position = Vector2(1780, 711)
-scale = Vector2(0.49875, 1)
-texture = ExtResource("1_8bd24")
+[connection signal="pressed" from="Base4" to="." method="_on_base_4_pressed"]
+[connection signal="pressed" from="Base8" to="." method="_on_base_8_pressed"]

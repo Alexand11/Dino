@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bd88i0rmag045"]
 
-[ext_resource type="PackedScene" uid="uid://dcoo4nevm2gh" path="res://Scenes/plaer.tscn" id="1_vcsut"]
+[ext_resource type="PackedScene" uid="uid://dcoo4nevm2gh" path="res://Scenes/player.tscn" id="1_vcsut"]
 
 [node name="batalla" type="Control"]
 layout_mode = 3

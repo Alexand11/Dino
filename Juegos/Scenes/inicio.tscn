@@ -19,6 +19,7 @@ offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_s8fiw")
+metadata/_edit_lock_ = true
 
 [node name="FondoInicio" type="TextureRect" parent="."]
 layout_mode = 1
@@ -47,9 +48,11 @@ position = Vector2(113, 689)
 scale = Vector2(0.43, 0.78)
 texture = ExtResource("3_qb6rm")
 
-[node name="Base2" type="Sprite2D" parent="."]
-position = Vector2(117, 881)
+[node name="Base2" type="TouchScreenButton" parent="."]
+position = Vector2(33, 829)
 scale = Vector2(0.43, 0.78)
-texture = ExtResource("3_qb6rm")
+texture_normal = ExtResource("3_qb6rm")
 
 [connection signal="pressed" from="TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="Base2" to="." method="_on_base_2_pressed"]
+[connection signal="released" from="Base2" to="." method="_on_base_2_released"]

@@ -1,0 +1,91 @@
+[gd_scene load_steps=6 format=3 uid="uid://du16yhovga7ph"]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_3gsaw"]
+[ext_resource type="Texture2D" uid="uid://dhga4nermayro" path="res://sprites/base.png" id="2_vvnyr"]
+[ext_resource type="Texture2D" uid="uid://1hys0bobrnd7" path="res://sprites/barraDeVida(Vacia).png" id="3_2xa6s"]
+[ext_resource type="Texture2D" uid="uid://bhoeancjkcks5" path="res://sprites/barraDeVida(Llena).png" id="4_7doe1"]
+[ext_resource type="Texture2D" uid="uid://cj24302v8oimu" path="res://sprites/heart.png" id="5_svssi"]
+
+[node name="enemy" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3gsaw")
+metadata/_edit_lock_ = true
+
+[node name="Base" type="Sprite2D" parent="."]
+position = Vector2(1679, 191.5)
+scale = Vector2(1, 1.525)
+texture = ExtResource("2_vvnyr")
+
+[node name="Vida" type="TextureProgressBar" parent="."]
+offset_left = 932.0
+offset_top = 223.0
+offset_right = 1056.0
+offset_bottom = 255.0
+scale = Vector2(4, 1.5)
+max_value = 10.0
+value = 4.0
+texture_under = ExtResource("3_2xa6s")
+texture_progress = ExtResource("4_7doe1")
+
+[node name="Heart" type="TextureRect" parent="."]
+offset_left = 864.0
+offset_top = 215.0
+offset_right = 904.0
+offset_bottom = 255.0
+scale = Vector2(3, 2)
+texture = ExtResource("5_svssi")
+
+[node name="Base3" type="Sprite2D" parent="."]
+position = Vector2(515, 241)
+scale = Vector2(1.2475, 0.37)
+texture = ExtResource("2_vvnyr")
+
+[node name="efectos" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 64.0
+offset_right = 4246.0
+offset_bottom = 264.0
+scale = Vector2(0.3, 0.5)
+theme_override_constants/separation = 50
+
+[node name="Base6" type="TextureRect" parent="efectos"]
+layout_mode = 2
+texture = ExtResource("2_vvnyr")
+
+[node name="Base7" type="TextureRect" parent="efectos"]
+layout_mode = 2
+texture = ExtResource("2_vvnyr")
+
+[node name="Base8" type="TextureRect" parent="efectos"]
+layout_mode = 2
+texture = ExtResource("2_vvnyr")
+
+[node name="Base9" type="TextureRect" parent="efectos"]
+layout_mode = 2
+texture = ExtResource("2_vvnyr")
+
+[node name="Base10" type="TextureRect" parent="efectos"]
+layout_mode = 2
+texture = ExtResource("2_vvnyr")
+
+[node name="Base11" type="TextureRect" parent="efectos"]
+layout_mode = 2
+texture = ExtResource("2_vvnyr")
+
+[node name="Base12" type="TextureRect" parent="efectos"]
+layout_mode = 2
+texture = ExtResource("2_vvnyr")
+
+[node name="Base13" type="TextureRect" parent="efectos"]
+layout_mode = 2
+texture = ExtResource("2_vvnyr")
+
+[node name="Base14" type="TextureRect" parent="efectos"]
+layout_mode = 2
+texture = ExtResource("2_vvnyr")

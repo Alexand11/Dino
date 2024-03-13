@@ -14,6 +14,10 @@ config/name="JuegoDio"
 run/main_scene="res://Scenes/inicio.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 
+[autoload]
+
+Signs="*res://scripts/Globales/Signs.gd"
+
 [display]
 
 window/size/viewport_width=1920
@@ -27,6 +31,8 @@ window/stretch/aspect="expand"
 folder_colors={
 "res://Scenes/": "gray",
 "res://scripts/": "purple",
+"res://scripts/Clases/": "red",
+"res://scripts/Globales/": "blue",
 "res://sprites/": "yellow"
 }
 
@@ -36,5 +42,8 @@ pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/decals/filter=0
+textures/light_projectors/filter=0
