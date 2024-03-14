@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bd88i0rmag045"]
+[gd_scene load_steps=4 format=3 uid="uid://bd88i0rmag045"]
 
 [ext_resource type="PackedScene" uid="uid://dcoo4nevm2gh" path="res://Scenes/player.tscn" id="1_vcsut"]
+[ext_resource type="PackedScene" uid="uid://du16yhovga7ph" path="res://Scenes/enemy.tscn" id="2_ws1q6"]
+[ext_resource type="Texture2D" uid="uid://c5ja6h3yiqcr2" path="res://sprites/BotonImprovisado.png" id="3_7ei1a"]
 
 [node name="batalla" type="Control"]
 layout_mode = 3
@@ -10,4 +12,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="plaer" parent="." instance=ExtResource("1_vcsut")]
+[node name="player" parent="." instance=ExtResource("1_vcsut")]
+layout_mode = 1
+
+[node name="enemy" parent="." instance=ExtResource("2_ws1q6")]
+layout_mode = 1
+
+[node name="TerminarTuro" type="TouchScreenButton" parent="."]
+position = Vector2(1751, 362)
+scale = Vector2(0.2975, 0.585)
+texture_normal = ExtResource("3_7ei1a")
+
+[connection signal="pressed" from="TerminarTuro" to="player" method="_on_terminar_turo_pressed"]

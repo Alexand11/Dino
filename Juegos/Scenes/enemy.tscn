@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://du16yhovga7ph"]
+[gd_scene load_steps=7 format=3 uid="uid://du16yhovga7ph"]
 
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="1_3gsaw"]
 [ext_resource type="Texture2D" uid="uid://dhga4nermayro" path="res://sprites/base.png" id="2_vvnyr"]
 [ext_resource type="Texture2D" uid="uid://1hys0bobrnd7" path="res://sprites/barraDeVida(Vacia).png" id="3_2xa6s"]
 [ext_resource type="Texture2D" uid="uid://bhoeancjkcks5" path="res://sprites/barraDeVida(Llena).png" id="4_7doe1"]
+[ext_resource type="Texture2D" uid="uid://d1dtsksi7ua2x" path="res://sprites/barraDeEnergia(Llena).png" id="4_t6d4l"]
 [ext_resource type="Texture2D" uid="uid://cj24302v8oimu" path="res://sprites/heart.png" id="5_svssi"]
 
 [node name="enemy" type="Control"]
@@ -21,7 +22,20 @@ position = Vector2(1679, 191.5)
 scale = Vector2(1, 1.525)
 texture = ExtResource("2_vvnyr")
 
+[node name="Energia" type="TextureProgressBar" parent="."]
+visible = false
+offset_left = 337.0
+offset_top = 231.0
+offset_right = 461.0
+offset_bottom = 263.0
+scale = Vector2(4, 1.5)
+max_value = 10.0
+value = 4.0
+texture_under = ExtResource("3_2xa6s")
+texture_progress = ExtResource("4_t6d4l")
+
 [node name="Vida" type="TextureProgressBar" parent="."]
+layout_mode = 0
 offset_left = 932.0
 offset_top = 223.0
 offset_right = 1056.0
@@ -33,17 +47,13 @@ texture_under = ExtResource("3_2xa6s")
 texture_progress = ExtResource("4_7doe1")
 
 [node name="Heart" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 864.0
 offset_top = 215.0
 offset_right = 904.0
 offset_bottom = 255.0
 scale = Vector2(3, 2)
 texture = ExtResource("5_svssi")
-
-[node name="Base3" type="Sprite2D" parent="."]
-position = Vector2(515, 241)
-scale = Vector2(1.2475, 0.37)
-texture = ExtResource("2_vvnyr")
 
 [node name="efectos" type="HBoxContainer" parent="."]
 layout_mode = 0
