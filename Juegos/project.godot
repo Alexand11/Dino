@@ -30,11 +30,14 @@ window/stretch/aspect="expand"
 [file_customization]
 
 folder_colors={
-"res://Scenes/": "gray",
+"res://Scenes/": "green",
 "res://scripts/": "purple",
 "res://scripts/Clases/": "red",
 "res://scripts/Globales/": "blue",
-"res://sprites/": "yellow"
+"res://sprites/": "yellow",
+"res://sprites/Dinos/": "red",
+"res://sprites/Effect/": "gray",
+"res://sprites/Interface/": "pink"
 }
 
 [input_devices]

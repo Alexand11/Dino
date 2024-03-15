@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dcoo4nevm2gh" path="res://Scenes/player.tscn" id="1_vcsut"]
 [ext_resource type="PackedScene" uid="uid://du16yhovga7ph" path="res://Scenes/enemy.tscn" id="2_ws1q6"]
-[ext_resource type="Texture2D" uid="uid://c5ja6h3yiqcr2" path="res://sprites/BotonImprovisado.png" id="3_7ei1a"]
+[ext_resource type="Texture2D" uid="uid://c5ja6h3yiqcr2" path="res://sprites/Interface/BotonImprovisado.png" id="3_7ei1a"]
 
 [node name="batalla" type="Control"]
 layout_mode = 3

@@ -1,14 +1,23 @@
-[gd_scene load_steps=10 format=3 uid="uid://dcoo4nevm2gh"]
+[gd_scene load_steps=19 format=3 uid="uid://dcoo4nevm2gh"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_m0j5h"]
-[ext_resource type="Texture2D" uid="uid://dhga4nermayro" path="res://sprites/base.png" id="2_p1akn"]
-[ext_resource type="Texture2D" uid="uid://c5ja6h3yiqcr2" path="res://sprites/BotonImprovisado.png" id="3_d648q"]
-[ext_resource type="Texture2D" uid="uid://rnv28jxs3wns" path="res://sprites/PntosAccion0.png" id="3_k0773"]
-[ext_resource type="Texture2D" uid="uid://cb80jj1xfrmdu" path="res://sprites/PntosAccion1.png" id="4_gacys"]
-[ext_resource type="Texture2D" uid="uid://1hys0bobrnd7" path="res://sprites/barraDeVida(Vacia).png" id="5_shqon"]
-[ext_resource type="Texture2D" uid="uid://bhoeancjkcks5" path="res://sprites/barraDeVida(Llena).png" id="6_bmcol"]
-[ext_resource type="Texture2D" uid="uid://cj24302v8oimu" path="res://sprites/heart.png" id="7_ysxb7"]
-[ext_resource type="Texture2D" uid="uid://d1dtsksi7ua2x" path="res://sprites/barraDeEnergia(Llena).png" id="8_tvxmm"]
+[ext_resource type="Texture2D" uid="uid://bn83qnu8p6m7w" path="res://sprites/Dinos/pterodactilo.png" id="2_v487e"]
+[ext_resource type="Texture2D" uid="uid://c5ja6h3yiqcr2" path="res://sprites/Interface/BotonImprovisado.png" id="3_d648q"]
+[ext_resource type="Texture2D" uid="uid://rnv28jxs3wns" path="res://sprites/Interface/PntosAccion0.png" id="3_k0773"]
+[ext_resource type="Texture2D" uid="uid://cb80jj1xfrmdu" path="res://sprites/Interface/PntosAccion1.png" id="4_gacys"]
+[ext_resource type="Texture2D" uid="uid://1hys0bobrnd7" path="res://sprites/Interface/barraDeVida(Vacia).png" id="5_shqon"]
+[ext_resource type="Texture2D" uid="uid://bhoeancjkcks5" path="res://sprites/Interface/barraDeVida(Llena).png" id="6_bmcol"]
+[ext_resource type="Texture2D" uid="uid://cj24302v8oimu" path="res://sprites/Interface/heart.png" id="7_ysxb7"]
+[ext_resource type="Texture2D" uid="uid://d1dtsksi7ua2x" path="res://sprites/Interface/barraDeEnergia(Llena).png" id="8_tvxmm"]
+[ext_resource type="Texture2D" uid="uid://bxpdxjyh4snbi" path="res://sprites/Effect/Bleeding.png" id="10_sko47"]
+[ext_resource type="Texture2D" uid="uid://bqwu177pukuvd" path="res://sprites/Effect/bleed out.png" id="11_2tx11"]
+[ext_resource type="Texture2D" uid="uid://hctes0n71ksm" path="res://sprites/Effect/Reduction.png" id="12_aw6fa"]
+[ext_resource type="Texture2D" uid="uid://dq7towdnh25ds" path="res://sprites/Effect/Stunned.png" id="13_3e3go"]
+[ext_resource type="Texture2D" uid="uid://cv4nv61tihpmy" path="res://sprites/Effect/Dodge.png" id="14_v6fq4"]
+[ext_resource type="Texture2D" uid="uid://dfl6agbqh6g2q" path="res://sprites/Effect/arrows.png" id="15_bqpmm"]
+[ext_resource type="Texture2D" uid="uid://dyj48u6r5hbo6" path="res://sprites/Effect/Inmunity.png" id="16_q8tki"]
+[ext_resource type="Texture2D" uid="uid://cpn4fmir4l4v4" path="res://sprites/Effect/SwordFire.png" id="17_nrcl6"]
+[ext_resource type="Texture2D" uid="uid://3lpnp44wix5x" path="res://sprites/Effect/escudo.png" id="18_fyuu0"]
 
 [node name="player" type="Control"]
 layout_mode = 3
@@ -20,22 +29,64 @@ grow_vertical = 2
 script = ExtResource("1_m0j5h")
 metadata/_edit_lock_ = true
 
-[node name="Dino" type="Sprite2D" parent="."]
-position = Vector2(211, 791)
+[node name="Dino" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.009
+anchor_top = 0.55
+anchor_right = 0.226
+anchor_bottom = 0.945
+offset_left = 0.720003
+offset_right = 142.08
+offset_bottom = -181.6
 scale = Vector2(0.745, 1.74)
-texture = ExtResource("2_p1akn")
+texture = ExtResource("2_v487e")
 
-[node name="Base" type="TouchScreenButton" parent="."]
+[node name="ataqueÚnico" type="TouchScreenButton" parent="."]
+position = Vector2(1430, 765)
+texture_normal = ExtResource("3_d648q")
+
+[node name="LabelataqueÚnico" type="Label" parent="ataqueÚnico"]
+anchors_preset = -1
+anchor_right = 0.965
+anchor_bottom = 0.965
+offset_left = 14.0
+offset_top = 10.0
+offset_right = -248.0
+offset_bottom = -122.0
+scale = Vector2(3, 3)
+text = "Ataque Crítico"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ataqueAvanzado" type="TouchScreenButton" parent="."]
+position = Vector2(942, 762)
+texture_normal = ExtResource("3_d648q")
+
+[node name="LabelataqueAvanzado" type="Label" parent="ataqueAvanzado"]
+offset_left = 20.0
+offset_top = 7.0
+offset_right = 143.0
+offset_bottom = 70.0
+scale = Vector2(3, 3)
+text = "Rasguño X2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ataqueBasico" type="TouchScreenButton" parent="."]
 position = Vector2(445, 761)
 texture_normal = ExtResource("3_d648q")
 
-[node name="Base2" type="Sprite2D" parent="."]
-position = Vector2(1079, 857)
-texture = ExtResource("2_p1akn")
-
-[node name="Base3" type="Sprite2D" parent="."]
-position = Vector2(1553, 857)
-texture = ExtResource("2_p1akn")
+[node name="LabelataqueBasico" type="Label" parent="ataqueBasico"]
+offset_left = 20.0
+offset_top = 4.0
+offset_right = 140.0
+offset_bottom = 66.0
+scale = Vector2(3, 3)
+text = "Coletazo"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ptos" type="TextureProgressBar" parent="."]
 layout_mode = 0
@@ -101,48 +152,74 @@ scale = Vector2(3, 2)
 texture = ExtResource("7_ysxb7")
 
 [node name="efectos" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 438.0
-offset_top = 525.0
-offset_right = 4438.0
-offset_bottom = 725.0
-scale = Vector2(0.3, 0.5)
-theme_override_constants/separation = 50
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.237
+anchor_top = 0.509
+anchor_right = 0.717
+anchor_bottom = 0.583
+offset_left = 0.95993
+offset_top = 0.280029
+offset_right = -552.64
+offset_bottom = -47.64
+scale = Vector2(2.5, 2.5)
+theme_override_constants/separation = 5
 
-[node name="Base6" type="TextureRect" parent="efectos"]
+[node name="Sangrado" type="TextureRect" parent="efectos"]
+visible = false
 layout_mode = 2
-texture = ExtResource("2_p1akn")
+texture = ExtResource("10_sko47")
 
-[node name="Base7" type="TextureRect" parent="efectos"]
+[node name="Desangrar" type="TextureRect" parent="efectos"]
+visible = false
 layout_mode = 2
-texture = ExtResource("2_p1akn")
+texture = ExtResource("11_2tx11")
 
-[node name="Base8" type="TextureRect" parent="efectos"]
+[node name="ReduciónDeDaño" type="TextureRect" parent="efectos"]
+visible = false
 layout_mode = 2
-texture = ExtResource("2_p1akn")
+texture = ExtResource("12_aw6fa")
 
-[node name="Base9" type="TextureRect" parent="efectos"]
+[node name="Aturdido" type="TextureRect" parent="efectos"]
+visible = false
 layout_mode = 2
-texture = ExtResource("2_p1akn")
+texture = ExtResource("13_3e3go")
 
-[node name="Base10" type="TextureRect" parent="efectos"]
+[node name="Sigilo" type="TextureRect" parent="efectos"]
+visible = false
 layout_mode = 2
-texture = ExtResource("2_p1akn")
+texture = ExtResource("14_v6fq4")
 
-[node name="Base11" type="TextureRect" parent="efectos"]
+[node name="Contraataque" type="TextureRect" parent="efectos"]
+visible = false
 layout_mode = 2
-texture = ExtResource("2_p1akn")
+texture = ExtResource("15_bqpmm")
 
-[node name="Base12" type="TextureRect" parent="efectos"]
+[node name="Inmunidad" type="TextureRect" parent="efectos"]
+visible = false
 layout_mode = 2
-texture = ExtResource("2_p1akn")
+texture = ExtResource("16_q8tki")
 
-[node name="Base13" type="TextureRect" parent="efectos"]
+[node name="Furia" type="TextureRect" parent="efectos"]
+visible = false
 layout_mode = 2
-texture = ExtResource("2_p1akn")
+texture = ExtResource("17_nrcl6")
 
-[node name="Base14" type="TextureRect" parent="efectos"]
+[node name="Perforación" type="TextureRect" parent="efectos"]
+visible = false
 layout_mode = 2
-texture = ExtResource("2_p1akn")
+texture = ExtResource("18_fyuu0")
 
-[connection signal="pressed" from="Base" to="." method="_on_base_pressed"]
+[node name="Siuperioridad" type="TextureRect" parent="efectos"]
+visible = false
+layout_mode = 2
+texture = ExtResource("18_fyuu0")
+
+[node name="Miedo" type="TextureRect" parent="efectos"]
+visible = false
+layout_mode = 2
+texture = ExtResource("18_fyuu0")
+
+[connection signal="pressed" from="ataqueÚnico" to="." method="_on_ataqueúnico_pressed"]
+[connection signal="pressed" from="ataqueAvanzado" to="." method="_on_ataque_avanzado_pressed"]
+[connection signal="pressed" from="ataqueBasico" to="." method="_on_ataque_basico_pressed"]
